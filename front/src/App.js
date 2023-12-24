@@ -7,6 +7,7 @@ import Contacto from "../src/pages/Contacto.js";
 import SobreMi from "../src/pages/SobreMi.js";
 import Tienda from "../src/pages/Tienda.js";
 import Index from "../src/pages/Index.js";
+import Compra from "../src/pages/Compra.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
        <Route path="Contacto" element={<Contacto/>}/>
        <Route path="SobreMi" element={<SobreMi/>}/>
        <Route path="Tienda" element={<Tienda/>}/>
+       <Route path="Compra" element={<Compra/>}/>
       </Routes>
     </BrowserRouter> 
     <Footer/>
