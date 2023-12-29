@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Filtro from "../components/layout/Filtro";
 import Sort from "../components/layout/Ordenador";
 import Product from "./Producto";
+import "../styles/Tienda.css"
 
 const Tienda =() => {
     const [productos, setProductos] = useState([]);
@@ -15,14 +16,19 @@ const Tienda =() => {
         setOrden(newSortOption);
     };
     return (
-        <div>
+        <div className="tienda-container">
           <h1>Tienda</h1>
-          <Filtro onFilterChange={handleFilterChange} />
-          <Sort onSortChange={handleSortChange} />
-          <div className="productos-lista">
-            {productos.map((producto)=>(
-                <Product key={producto.id} producto={producto}/>
-            ))};
+          <div className="tienda-container2">
+             <div className="sidebar">  
+                 <Filtro onFilterChange={handleFilterChange} />
+                 <Sort onSortChange={handleSortChange} />
+             </div>
+             <div className="productos-lista">
+                 {productos.map((producto)=>(
+                 <Product key={producto.id} producto={producto}/>
+                  ))};
+                 <Product/>
+             </div>
           </div>
         </div>
     );

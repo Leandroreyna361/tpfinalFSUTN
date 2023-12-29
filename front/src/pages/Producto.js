@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "../styles/Producto.css"
 const Product = ({id, title, description, price, image}) => {
     const [quantity, setQuantity] = useState(1);
     const handleQuantityChange = (event) =>{

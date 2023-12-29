@@ -1,0 +1,32 @@
+.tienda-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.tienda-container2 {
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.produstos-lista {
+    width: 75%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+.sidebar, .productos-lista {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+h1{
+    margin: 20px 0;
+}

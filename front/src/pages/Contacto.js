@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Contacto.css"
 const Contacto =(props) => {
     return (
       <div className="holder">
@@ -13,19 +14,19 @@ const Contacto =(props) => {
             <div>
                 <h2>Contacto Rapido</h2>
                 <form action="" method="" className="formulario">
-                    <p>
+                    <p className="contactoBox">
                         <label for="nombre">Nombre</label>
                         <input type="text" name="" />
                     </p>
-                    <p>
+                    <p className="contactoBox"> 
                         <label for="email">Email</label> 
                         <input type="text" name="" />
                     </p>
-                    <p>
+                    <p className="contactoBox">
                         <label for="telefono">Telefono</label>
                         <input type="text" name="" />
                     </p>
-                    <p>
+                    <p className="contactoBox">
                         <label for="mensaje">Mensaje</label>
                         <textarea name=""></textarea>
                     </p>

@@ -1,0 +1,50 @@
+.holder {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+main {
+    display: flex;
+    justify-content: space-around;
+}
+.formulario {
+    max-width: 1000px;
+}
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.acciones {
+    text-align: center;
+    margin: 0px;
+}
+.datos {
+    max-width: 400px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 10px;
+}
+input {
+    margin: auto;
+}
+.contactoBox {
+    margin: 0px;
+}

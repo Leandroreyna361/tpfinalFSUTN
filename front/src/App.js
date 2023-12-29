@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
-//import './App.css';
+import "../src/styles/global.css"
+import './App.css';
 import Header from "../src/components/layout/Header.js";
 import Footer from "../src/components/layout/Footer.js";
 import Carrito from "../src/pages/Carrito.js";

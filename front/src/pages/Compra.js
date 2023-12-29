@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Compra.css"
 const Compra=()=>{
     const [medioPago, setMedioPago] = useState(``);
     const [datosPersonales, setDatosPersonales] = useState ({

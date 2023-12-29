@@ -1,0 +1,29 @@
+.persona {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.persona {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.persona-img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.persona h5, .persona h6 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+.persona p {
+    font-size: 1rem;
+    margin-top: 10px;
+}

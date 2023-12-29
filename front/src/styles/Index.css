@@ -1,0 +1,65 @@
+.main-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.homeimg {
+    flex: 1;
+    margin-right: 20px;
+}
+.homeimg img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8 px rgba(0,0,0,0.1);
+}
+.columnas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 1200px;
+}
+.bienvenidos {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 50%;
+}
+.cita {
+    font-style: italic;
+}
+.testimonios {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonios h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.testimonio {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.testimonio-columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.testimonio span {
+    margin-bottom: 10px;
+}
