@@ -1,0 +1,22 @@
+Buenas noches Flavia. Antes que nada queria agradecer este tiempo de formacion que recibi, tan clara y completa que termino 
+muy contento este curso.
+Por otro lado, queria pedir disuclpas porque soy conciente que no destine el tiempo necesario para cumplir con la propuesta
+que asumi de desarrollar un sitio ecommers completo, faltaron muchas funcionalidades y secciones por desarrollar, de igual modo 
+estoy contento, como bien dije, porque ademas, nunca he tenido un acercamiento al codigo como ahora, hasta el momento solo habia
+incursionado en Wordpress, pero ni de cerca es la misma experiencia.
+Desarrolle lo mas que pude, con ayuda de internet, no voy a negarlo, las secciones del front de carrito y ordenes estan solo 
+presentadas faltando desarrollo.
+En lo que respecta al administrador, fue lo que mas me gusto, ya que entendi, de algun modo como es que fuciona wordpress y woocomers,
+falto desarrollo de ordenes donde impactaria el formulario de metodo de pago y los productos del carrito,
+la seccion contacto trataba de impactar , los contactos , para tambien tener acceso por el admintrdor a esas peticiones con la 
+posibilidad de marcar en verde los vistos.
+Me voy con una exelente experiencia, mucho conocimiento y ganas de seguir aprendiendo.
+En paralelo y con otro manejos de tiempos voy a terminar este proyecot, ya que , ademas pasaria a produccion ya que esta basado en un emprendimiento
+familiar.
+
+URL: video  youtube   https://youtu.be/Zln1Upu8l8Q
+
+
+Un gusto 
+Muchas gracias!
+Leandro Reyna 41769351
