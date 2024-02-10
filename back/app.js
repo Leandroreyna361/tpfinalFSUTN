@@ -4,17 +4,31 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const exphbs = require('express-handlebars')
+
 require('dotenv') .config();
 var pool = require('./models/bd')
 var session = require('express-session')
+
+var fileUpload = require('express-fileupload')
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login')
 var adminRouter = require('./routes/admin/panel');
+
+var apiRouter = require('./routes/api');
+
 const { error } = require('console');
+var contactoNovedadesRouter = require('./routes/admin/contactoNovedades')
+var contactoRouter = require('./routes/admin/contacto')
+var staffRouter = require('./routes/admin/staff')
+var ordersRouter = require('./routes/admin/orders')
 
 var app = express();
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,13 +57,23 @@ secured = async (req, res, next) => {
     }} 
     catch (error){
       console.log(error);
-    }
   };
+};
+
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/panel', secured ,adminRouter);
+app.use('/admin/contactoNovedades', secured ,contactoNovedadesRouter);
+app.use('/admin/contacto', secured ,contactoRouter);
+app.use('/admin/staff', secured ,staffRouter);
+app.use('/admin/orders', secured ,ordersRouter);
+app.use('/api', cors(), apiRouter)
 
 //pool.query('select * from administradores') .then(function(resultados){
 //  console.log(resultados)

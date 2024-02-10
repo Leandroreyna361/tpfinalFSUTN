@@ -1,0 +1,25 @@
+<div class="container1 mt-5">
+    <h2>Completa los campos!</h2>
+    <div class="row">
+        <form action="/admin/contacto/agregarContacto" method="post">
+            <div class="form-group">
+                <input type="text" class="input-field" id="inputUser" placeholder="Nombre" name="nombre"></input>
+            </div>
+          <div class="form-group">
+                <input type="email" class="input-field" id="inputSubtitulo" placeholder="Email" name="email"></input>
+            </div>
+          <div class="form-group">
+               <input type="number" class="input-field" id="inputCuerpo" placeholder="Telefono" name="telefono"></input>
+          </div>
+          <div class="form-group">
+               <textarea type="text" class="input-field" id="inputCuerpo" placeholder="Mensaje" name="mensaje"></textarea>
+          </div>
+          {{#if error}}
+               <p class="error-message ">{{message}}</p>
+          {{/if}}
+          <button type="submit" class="submit-button">Guardar</button>
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../public/stylesheets/admin.css">

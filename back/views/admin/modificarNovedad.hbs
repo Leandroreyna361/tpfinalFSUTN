@@ -1,0 +1,26 @@
+<div class="container1 mt-5">
+    <h2>Modifica lo que necesites!</h2>
+    <div class="row">
+        <form action="/admin/contactoNovedades/modificarNovedad" method="post">
+            <input type="hidden" value="{{novedad.id}}" name="id">
+            <div class="form-group">
+                <label for="">Titulo</label>
+                <input type="text" class="input-field" id="inputUser" placeholder="Titulo" name="titulo" value="{{novedad.titulo}}"></input>
+            </div>
+          <div class="form-group">
+                <label for="">Subtitulo</label>
+                <textarea type="text" class="input-field" id="inputSubtitulo" placeholder="Subtitulo" name="subtitulo">{{novedad.subtitulo}}</textarea>
+            </div>
+          <div class="form-group">
+               <label for="">Cuerpo</label>
+               <textarea type="text" class="input-field" id="inputCuerpo" placeholder="Cuerpo" name="cuerpo">{{novedad.cuerpo}}</textarea>
+          </div>
+          {{#if error}}
+          <p class="error-message ">{{message}}</p>
+          {{/if}}
+          <button type="submit" class="submit-button">Modificar</button>
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../public/stylesheets/admin.css">

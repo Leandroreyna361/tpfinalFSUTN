@@ -1,0 +1,28 @@
+<div class="container1 mt-5">
+    <h2>Completa los campos!</h2>
+    <div class="row">
+        <form action="/admin/staff/agregarStaff" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" class="input-field" id="inputUser" placeholder="Imagen" name="imagen"></input>
+            </div>
+          <div class="form-group">
+                <input type="text" class="input-field" id="inputSubtitulo" placeholder="Nombre" name="nombre"></input>
+            </div>
+          <div class="form-group">
+               <input type="text" class="input-field" id="inputCuerpo" placeholder="Puesto" name="puesto"></input>
+          </div>
+          <div class="form-group">
+               <textarea type="text" class="input-field" id="inputCuerpo" placeholder="Descripcion" name="Descripcion"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Imagen: <input type="file" name="imagen1" id="imagen1"></label>
+          </div>
+          {{#if error}}
+                <p class="error-message ">{{message}}</p>
+          {{/if}}
+          <button type="submit" class="submit-button">Guardar</button>
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../public/stylesheets/admin.css">

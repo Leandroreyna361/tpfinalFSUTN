@@ -1,9 +1,45 @@
-<h1>holis</h1>
-
-<div class="container" id="panel-container" > 
+<div class="container">
+    <div class="flex-container">
+        <div class="flex-item">
+            <h3>Listado de Productos</h3>
+        </div>
+        <div class="flex-item">
+            <a class="btn btn-success" href="/admin/panel/agregarProducto">Nuevo</a>
+        </div>
+    </div>
     <div class="row">
-        <p id="welcome-message">Hola {{nombre}} ! <a id="logout-btn" href="/admin/login/logout">Cerrar Sesion</a></p>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {{#each productos}}
+                    <tr>
+                         <th scope="row">{{id}}</th>
+                         <td>{{{imagen1}}}</td>
+                         <td>{{titulo}}</td>
+                         <td>{{descripcion}}</td>
+                         <td>{{precio}}</td>
+                         <td>{{stock}}</td>
+                         <td class="text-end">
+                            <a class="btn btn-secondary" href="/admin/panel/modificarProducto/{{id}}">Editar</a>
+                            <a class="btn btn-secondary" href="/admin/panel/eliminarProducto/{{id}}">Borrar</a>
+                         </td>
+                    </tr>
+                  {{/each}}
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
-<link rel="stylesheet" href="/stylesheets/admin.css">
+<link rel="stylesheet" href="/stylesheets/tablaPanel.css">

@@ -1,6 +1,24 @@
-import React from "react";
-import "../styles/SobreMi.css"
-const SobreMi =(props) => {
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import StaffIndividual from './StaffIndividual';
+import "../styles/SobreMi.css";
+
+const SobreMi = () => {
+    const [staff, setStaff] = useState([]);
+
+    useEffect(() => {
+        const fetchStaff = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/api/staff');
+                setStaff(response.data);
+            } catch (error) {
+                console.error('Error al obtener productos:', error);
+            }
+        };
+
+        fetchStaff();
+    }, []);
+
     return (
         <div>
         <main className="holder">
@@ -18,15 +36,14 @@ const SobreMi =(props) => {
                 </div>
             </div>
         </main>
-            <div className="personas">
-                <div className="persona">
-                 <img className="persona-img" src="/" alt="persona"/>
-                 <h5>Juan Lopez</h5>
-                 <h6>Ecangado de Proveedores</h6>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div className="staff-lista">
+                    {staff.map((staff) => (
+                        <StaffIndividual key={staff.id} staff={staff} />
+                    ))}
                 </div>
-            </div>
         </div>
     );
-} 
+    
+};
+
 export default SobreMi;

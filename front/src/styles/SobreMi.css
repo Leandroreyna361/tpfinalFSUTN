@@ -27,3 +27,13 @@
     font-size: 1rem;
     margin-top: 10px;
 }
+.staff-lista {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}

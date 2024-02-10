@@ -1,0 +1,39 @@
+<div class="container1 mt-5">
+    <h2>Modifica los campos!</h2>
+    <div class="row">
+        <form action="/admin/staff/modificarStaff" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="{{staff.id}}" name="id">
+            <div class="form-group">
+                <label for="">Imagen</label>
+                <input type="text" class="input-field" id="inputUser" placeholder="Imagen" name="imagen" value="{{staff.imagen}}"></input>
+            </div>
+          <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" class="input-field" id="inputSubtitulo" placeholder="Nombre" name="nombre" value="{{staff.nombre}}"></input>
+            </div>
+          <div class="form-group">
+               <label for="">Puesto</label>
+               <input type="text" class="input-field" id="inputCuerpo" placeholder="Puesto" name="puesto" value="{{staff.puesto}}"></input>
+          </div>
+          <div class="form-group">
+               <label for="">Descripcion</label>
+               <textarea type="text" class="input-field" id="inputCuerpo" placeholder="Descripcion" name="descripcion">{{staff.descripcion}}</textarea>
+          </div>
+          <div class="form-group">
+            <p>
+                <label>Imagen: <input type="file" name="imagen1" id="imagen1"/></label>
+            </p>
+            <p>
+                <label><input type="checkbox" name="img-delete" id="img_delete" value="1"/>Eliminar imagen actual?</label>
+                <input type="hidden" name="img_original" value="{{staff.img_id}}"/>
+            </p>
+          </div>
+          {{#if error}}
+                <p class="error-message ">{{message}}</p>
+          {{/if}}
+          <button type="submit" class="submit-button">Modificar</button>
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../public/stylesheets/admin.css">
